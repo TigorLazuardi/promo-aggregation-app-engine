@@ -4,9 +4,8 @@ const n = process.env.NODE_ENV
 
 const environment = n || ''
 const database = process.env.DATABASE || 'Promo-Aggregator'
-const uri = n
-  ? `mongodb://localhost:27017/${database}-${environment}`
-  : 'mongodb+srv://admin:admin@tigorhutasuhut-vdnzf.mongodb.net/Process-Aggregator-test?retryWrites=true&w=majority'
+const uri =
+  'mongodb+srv://admin:admin@tigorhutasuhut-vdnzf.mongodb.net/Process-Aggregator-test?retryWrites=true&w=majority'
 ;(async () => {
   try {
     await connect(uri, {
